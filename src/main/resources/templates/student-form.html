@@ -20,10 +20,18 @@
 
     Country:
     <select th:field="*{country}">
+<!--        //here we are basically picking up value from student.country from student Model-->
 
         <option th:each="tempCountry : ${countries}" th:value = "${tempCountry}" th:text="${tempCountry}" />
 
     </select>
+
+    <br><br>
+    Favourite Programming Languages:
+    <input type="radio" th:field="*{favouriteLanguage}"
+                        th:each="tempLang: ${languages}"
+                        th:value="${tempLang}"
+                        th:text="${tempLang}" />
 
     <!-- Submit button -->
     <input type="submit" value="Submit" />

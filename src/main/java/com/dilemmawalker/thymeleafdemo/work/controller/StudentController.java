@@ -16,6 +16,9 @@ public class StudentController {
     @Value("${countries}")
     private List<String> countries;
 
+    @Value("${languages}")
+    private List<String> languages;
+
     @GetMapping("/showStudentForm")
     public String showForm(Model model){
         //having model in initial controller helps with retaining value to be used later in view template.
@@ -28,6 +31,9 @@ public class StudentController {
 
         //add list of countries to model
         model.addAttribute("countries", countries);
+
+        //add list of languages to model
+        model.addAttribute("languages", languages);
 
         return "student-form";
     }
