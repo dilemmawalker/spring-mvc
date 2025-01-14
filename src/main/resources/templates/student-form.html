@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+
+    <!-- Reference CSS file here -->
+</head>
+
+<body>
+<h3> Student Registration Form </h3>
+
+<!-- Form for student registration -->
+<form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+    <!-- Binding form fields to student properties -->
+    First name: <input type="text" th:field="*{firstName}" />
+    <br><br>
+    Last name: <input type="text" th:field="*{lastName}" />
+    <br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

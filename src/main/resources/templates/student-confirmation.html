@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<!--"th" denotes a thymeleaf tag.-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--xmlns:th denotes xml namespace for thymeleaf-->
+<head>
+    <meta charset="UTF-8" >
+    <title>
+        Student Confirmation
+    </title>
+
+    <!--    Reference css file here-->
+</head>
+
+<body>
+<!--"th" denotes a thymeleaf tag.-->
+    <h3> Student Confirmation</h3>
+
+The student is confirmed: <span th:text="${student.firstName} + ' ' + ${student.lastName}" />
+</body>
+</html>
