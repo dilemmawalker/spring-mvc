@@ -1,5 +1,6 @@
 package com.dilemmawalker.springMVCValidation.model;
 
+import com.dilemmawalker.springMVCValidation.validation.CourseCode;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,4 +25,7 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message="only 5 chars/digits allowed")
     private String postalCode;
+
+    @CourseCode
+    private String courseCode;
 }
