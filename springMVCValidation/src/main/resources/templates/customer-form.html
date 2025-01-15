@@ -29,6 +29,14 @@
 
         <br><br>
 
+<!--        Add error message(if present)-->
+        Free passes: <input type="text" th:field="*{freePass}" />
+        <span th:if="${#fields.hasErrors('freePass')}"
+              th:errors="*{freePass}"
+              class="error">
+        </span>
+
+
         <input type="submit" value="Submit button" />
 
     </form>
